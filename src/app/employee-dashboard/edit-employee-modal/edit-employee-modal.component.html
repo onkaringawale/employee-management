@@ -1,0 +1,71 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Employee</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <form class="row g-3" [formGroup]= "profileForm">
+
+        <div class="col-12 text-center"  >
+        <img [src]="employeeData.profileData"  height="100" width="100"><br>
+        <input type="file" formControlName="url" (change)="onselectfile($event)" >
+      </div>
+
+
+        <div class="col-md-6">
+          <label  class="form-label">First Name</label>
+          <input type="text" class="form-control" formControlName="firstname" id="inputEmail4">
+        </div>
+        
+          <small class="form-text text-danger" *ngIf=" profileForm.get('firstname')?.errors?.['pattern']">
+            Only albhabates allowed
+          </small>
+       
+
+        <div class="col-md-6">
+          <label  class="form-label">Last Name</label>
+          <input type="text" class="form-control"formControlName="lastname" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label  class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputAddress" formControlName="email" placeholder="abc@123">
+        </div>
+        <div class="col-12">
+          <label  class="form-label">mobile</label>
+          <input type="number" class="form-control" formControlName="mobileno" id="inputAddress2" placeholder="79898368989082">
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="range" class="form-range" min="20" max="60" id="customRange2" formControlName="range">
+          
+        </div>
+        <div class="col-md-12">
+          <label for="inputCity" class="form-label">city</label>
+          <input type="text" class="form-control" formControlName="city" id="inputCity" placeholder="pune">
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" for="inputAddress2"class="form-label">State</label>
+          <select id="inputState" class="form-select" formControlName="State">
+            <option disabled selected>Choose...</option>
+            <option value="maharashtra">maharashtra</option>
+            <option value="karnataka">karnataka</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputcountry"  class="form-label">Country</label>
+          <select id="inputcountry" class="form-select" formControlName="Country">
+            <option disabled selected>Choose...</option>
+            <option values="india">india</option>
+            <option value="USA">USA</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        
+        
+        
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" (click)="activeModal.dismiss('Close click')">Close</button>
+          <button type="button" (click)="updateEmployeedetails()" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+</div>

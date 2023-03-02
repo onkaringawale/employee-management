@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "firstname": "onkar",
+      "lastname": "",
+      "email": "",
+      "mobileno": "",
+      "age": "",
+      "city": "",
+      "State": "",
+      "Country": "",
+      "range": "",
+      "url": "",
+      "profileData": "assets/undefined",
+      "id": 1
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "mobileno": "",
+      "city": "",
+      "State": "maharatra",
+      "Country": "",
+      "range": "",
+      "url": "",
+      "profileData": "assets/undefined",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

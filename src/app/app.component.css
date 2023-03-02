@@ -1,0 +1,30 @@
+.nav{
+    position: absolute;
+    margin-left: 50%;
+    font-size: 20px;
+    font-weight: 800;
+    color: greenyellow;
+}
+a:link {
+    color: green;
+  }
+  
+  
+  a:visited {
+    color: green;
+  }
+  
+ 
+  a:hover {
+    color: red;
+  }
+  
+ 
+  a:active {
+    color: yellow;
+  }
+
+  app-employee-dashboard:nth-of-type(2) {
+    display: none;
+  }
+
